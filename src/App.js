@@ -12,7 +12,7 @@ class App extends React.Component {
 
     // days contains objects with the following properties:
     // date, weather_desc, icon, temp
-    days: new Array(5)
+    days: new Array(7)
   };
 
   // creates the day objects and updates the state
@@ -21,7 +21,7 @@ class App extends React.Component {
     const days = [];
     const dayIndices = this.getDayIndices(data);
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 7; i++) {
       days.push({
         date: data.list[dayIndices[i]].dt_txt,
         weather_desc: data.list[dayIndices[i]].weather[0].description,
@@ -57,7 +57,7 @@ class App extends React.Component {
     let index = 0;
     let tmp = data.list[index].dt_txt.slice(8, 10);
 
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 6; i++) {
       while (
         tmp === data.list[index].dt_txt.slice(8, 10) ||
         data.list[index].dt_txt.slice(11, 13) !== '15'
