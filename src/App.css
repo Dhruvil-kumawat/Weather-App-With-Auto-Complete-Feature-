@@ -9,9 +9,18 @@
 .App {
   text-align: center;
 }
+.footer-text {
+  color: rgba(255, 255, 255, 0.85); /* Soft white */
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.3); /* Optional: subtle dark background */
+  margin-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
 
 .App-header {
-  background-image: url('./images/background.jpg');
+  background-image: url('./images/pexels-vividcafe-681391.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;

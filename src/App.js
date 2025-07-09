@@ -3,6 +3,8 @@ import './App.css';
 import MainWeatherWindow from './components/MainWeatherWindow';
 import CityInput from './components/CityInput';
 import WeatherBox from './components/WeatherBox';
+import CityAutocomplete from './components/CityAutocomplete';
+
 
 class App extends React.Component {
   state = {
@@ -82,11 +84,16 @@ class App extends React.Component {
     return (
       <div className='App'>
         <header className='App-header'>
+          <h1 style={{marginBottom: "20px"}}>Dhiraj's Weather App 🌦️</h1>
           <MainWeatherWindow data={this.state.days[0]} city={this.state.city}>
-            <CityInput city={this.state.city} makeApiCall={this.makeApiCall.bind(this)} />
+           <CityAutocomplete onCitySelect={this.makeApiCall.bind(this)} />
             <WeatherBoxes />
           </MainWeatherWindow>
         </header>
+        {/* ✅ Added Footer */}
+      <footer style={{ marginTop: '30px', color: '#aaa', fontSize: '14px' }}>
+        Made by Dhiraj Kumar | Customized from an open-source project
+      </footer>
       </div>
     );
   }
