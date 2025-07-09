@@ -72,7 +72,7 @@ class App extends React.Component {
 
   render() {
     const WeatherBoxes = () => {
-      const weatherBoxes = this.state.days.slice(1).map(day => (
+      const weatherBoxes = this.state.days.map(day => (
         <li>
           <WeatherBox {...day} />
         </li>
